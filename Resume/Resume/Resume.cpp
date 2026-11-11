@@ -4,7 +4,6 @@
 #include <iomanip>
 #include <windows.h>
 
-// ANSI Escape Codes for Terminal Color Styling
 namespace Theme {
 	const std::string RESET = "\033[0m";
 	const std::string BOLD = "\033[1m";
@@ -45,25 +44,25 @@ class Resume {
 private:
 	// --- Personal Information ---
 	const std::string name = "Nathan Wathingira";
-	const std::string title = "Software Engineer | Junior Programmer";
-	const std::string email = "NWathingira@alumni.fullsail.edu";
+	const std::string title = "Junior Software Engineer | Junior Software Developer";
+	const std::string email = "NWathingira@gmail.com";
 	const std::string github = "https://github.com/NathanWGDev";
 	const std::string linkedin = "https://www.linkedin.com/in/nathan-wathingira-775976246/";
 	const std::string phone = "(301)-272-5555";
 	const std::string location = "Lanham, Maryland";
 
 	std::vector<ProffesionalSummary> summary = {
-		{"Organized and adaptable recent graduate with experience collaborating on team projects, troubleshooting issues, testing systems, maintaining project files, and following structured development workflows."},
-		{"Strong computer skills, attention to detail, and a methodical approach to solving problems. Seeking an entry - level role"}
+		{"Recent Game Development graduate with hands - on experience developing software features using C#, C++, Unity, and Unreal Engine."},
+		{"Experienced in collaborative development, debugging, software testing, version control, and implementing gameplay systems."},
+		{"Brings six years of professional customer service experience, with a background in team coordination, problem - solving, and daily operations.Seeking an entry - level software development or programming position."}
 	};
 
 	// --- Datasets ---
 	std::vector<std::pair<std::string, std::string>> skills = {
-		{"Languages", "C++, C#, SQL"},
-		{"Systems/Tools", "CMake, Visual Studio, Git, GitHub, Perforce, Trello"},
-		{"Programming", "Object-Oriented Programming, Data Structures, Algorithms, Systems Programming, MATLAB"},
-		{"Game Development", "Unreal Engine 5, Unity3D/2D, Gameplay Systems, AI, UI Programming, ECS"},
-		{"Development Practices", "Scrum, Agile Development, QA/Testing, Debugging, Performance Optimization, Collaboration"}
+		{"Programming", "C#, C++, SQL, Object - Oriented Programming, Data Structures, Algorithms"},
+		{"Development", "Unity, Unreal Engine, Visual Studio, Git, GitHub, Perforce"},
+		{"Software Practices", "Debugging, Software Testing, Troubleshooting, Version Control, Agile / Scrum"},
+		{"Productivity", "Microsoft Office, Microsoft Windows, Trello, Digital File Management"}
 	};
 
 	std::vector<Experience> work_history = {
@@ -72,9 +71,9 @@ private:
 		   "Gameplay Systems Lead",
 		   "September 2026 - October 2026",
 		 {
-			"Collaborated with a team of 5 developers to design and implement new gameplay features for a mobile game.",
-			"Created enemy scripts and behaviors using C# and Unity.",
-			"Managed the development lifecycle of gameplay assets from concept stages to a workable prototype.\n"
+			"Collaborated with a team of 3 alumni developers to design and implement new gameplay features for a mobile game.",
+			"Developed the gameplay in Unity using C#.",
+			"Created five enemy types and designed and their gameplay behavior for the core gameplay loop.\n"
 		 }
 
 		}
@@ -257,5 +256,6 @@ int main() {
 	SetConsoleOutputCP(CP_UTF8);
 	Resume resume;
 	resume.display();
+	std::cout << system("pause");
 	return 0;
 }
